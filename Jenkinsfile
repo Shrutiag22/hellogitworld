@@ -4,7 +4,7 @@ pipeline{
     stage('Build'){
       steps{
         echo 'Building..'
-        sh 'gradle build'
+        sh 'runme.sh'
         archiveArtifacts artifacts: '**/target/*.jar', fingerprint: true
       }
     }
